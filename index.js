@@ -8,11 +8,10 @@ const chatRouter = require("./routes/chatRoutes");
 const { Server } = require("socket.io");
 const cors = require("cors");
 const messageRouter = require("./routes/messageRoutes");
+const app = express();
 
 dotenv.config();
 connectDB();
-
-const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   pingTimeout: 60000,
@@ -36,6 +35,7 @@ app.use(notFound);
 app.use(errorHandler);
 
 module.exports = app;
+
 const PORT = process.env.PORT || 5001;
 
 // sockets logics
