@@ -8,7 +8,7 @@ provider:
   runtime: nodejs18.x
   memorySize: 1024
   stage: dev
-  region: ap-south-1
+  region: us-east-1
   timeout: 15
 
 functions:
