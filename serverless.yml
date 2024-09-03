@@ -1,0 +1,23 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: asish
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: ChatAppBackend
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  memorySize: 1024
+  stage: dev
+  region: ap-south-1
+  timeout: 15
+
+functions:
+  chatApp:
+    handler: handler.expressApp
+    events:
+      - http: ANY /{proxy+}
+      - http: ANY /
+    environment:
+      PORT: 4000
+      MONGODB_URI: mongodb+srv://asishBhandari:09023924331@cluster0.uzlvj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      JWT_SECRET: asish@bhandari
