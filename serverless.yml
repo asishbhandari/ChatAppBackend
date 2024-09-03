@@ -27,4 +27,4 @@ functions:
       - websocket:
         route: $connect
       - websocket:
-          route: $disconnect
+        route: $disconnect
