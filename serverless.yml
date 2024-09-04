@@ -21,10 +21,10 @@ functions:
       PORT: 4000
       MONGODB_URI: mongodb+srv://asishBhandari:09023924331@cluster0.uzlvj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
       JWT_SECRET: asish@bhandari
-  connectionHandler:
-    handler: handler.connectionHandler
-    events:
-      - websocket:
-        route: $connect
-      - websocket:
-        route: $disconnect
+  # connectionHandler:
+  #   handler: handler.connectionHandler
+  #   events:
+  #     - websocket:
+  #       route: $connect
+  #     - websocket:
+  #       route: $disconnect
