@@ -1,0 +1,26 @@
+# Dependencies 
+node_modules
+
+**/node_modules
+
+# environment variables
+.env
+.env.*
+.vscode/
+.git
+.gitignore
+.github
+
+dist/
+build/
+
+# ── Docker files themselves ───────────────────
+# No point including these inside the image
+Dockerfile
+Dockerfile.*
+docker-compose*.yml
+.dockerignore
+
+# ── README / docs ─────────────────────────────
+README.md
+docs/
